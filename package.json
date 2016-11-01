@@ -1,0 +1,50 @@
+{
+  "author": "Dennis Torres <djtorres0@gmail.com>",
+  "cordova": {
+    "id": "cordova-plugin-speech-recognition-ios-browser-polyill",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "lodash": "4.16.4",
+    "node-uuid": "1.4.7"
+  },
+  "description": "Cordova iOS polyfill for the Speech Recognition API",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "6.18.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-stage-2": "6.18.0",
+    "cordova-test": "0.1.6",
+    "eslint": "3.8.1",
+    "eslint-config-airbnb-base": "9.0.0",
+    "eslint-plugin-import": "2.0.1",
+    "rollup": "0.36.3",
+    "rollup-plugin-babel": "2.6.1"
+  },
+  "keywords": [
+    "api",
+    "browser",
+    "cordova",
+    "ecosystem:cordova",
+    "ios",
+    "polyfill",
+    "recognition",
+    "speech"
+  ],
+  "license": "Unlicense",
+  "main": "lib/index.js",
+  "name": "@blrrt/cordova-plugin-speech-recognition-ios-browser-polyfill",
+  "peerDependencies": {
+    "@blrrt/cordova-plugin-speech-recognition-ios": ">=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blrrt/cordova-plugin-speech-recognition-ios-browser-polyfill.git"
+  },
+  "scripts": {
+    "build": "rollup -c -i src/index.js -o lib/index.js",
+    "prepublish": "npm run build"
+  },
+  "version": "1.0.0"
+}

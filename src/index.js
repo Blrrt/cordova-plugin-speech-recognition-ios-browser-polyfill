@@ -17,10 +17,12 @@ class SpeechRecognitionEvent {
 
       for (let j = 0; j < iosTranscriptionSegmentCount; j += 1) {
         const iosTranscriptionSegment = iosTranscription.segments[j];
+        const browserTranscriptLeadingSpace = (j > 0) ? ' ' : '';
+        const browserTranscript = browserTranscriptLeadingSpace + iosTranscriptionSegment.substring;
 
         browserResults[j] = uniqDeep(_concat(browserResults[j] || [], {
           confidence: iosTranscriptionSegment.confidence,
-          transcript: iosTranscriptionSegment.substring,
+          transcript: browserTranscript,
         }));
 
         browserResults[j].isFinal = iosResult.isFinal;
